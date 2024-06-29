@@ -97,7 +97,7 @@ header .container nav ul li {
 }
 .solutions .container .solution-items .solution-item {
   background-color: #fff;
-  max-width: 33%;
+  max-width: 100%;
   padding: 25px;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);

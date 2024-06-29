@@ -107,7 +107,7 @@ header {
 
       .solution-item {
         background-color: #fff;
-        max-width: 33%;
+        max-width: 100%; // Change from 33% to 100%
         padding: 25px;
         border-radius: 10px;
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
