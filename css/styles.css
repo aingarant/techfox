@@ -26,8 +26,20 @@ header .container {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 50px 25px;
+  padding: 20px 25px;
   margin: 0 auto;
+}
+header .container nav .hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+header .container nav .hamburger span {
+  width: 25px;
+  height: 3px;
+  background-color: #000;
+  margin-bottom: 5px;
+  transition: all 0.3s ease;
 }
 header .container nav ul {
   display: flex;
@@ -219,15 +231,25 @@ footer .container p {
 
 @media screen and (max-width: 768px) {
   header .container {
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 0;
+    flex-wrap: wrap;
   }
-  header .container nav ul {
-    flex-direction: column;
+  header .container nav {
+    width: 100%;
   }
-  header .container nav ul li {
-    margin-left: 0;
+  header .container nav .hamburger {
+    display: flex;
+  }
+  header .container nav .nav-links {
+    display: none;
+    width: 100%;
+    flex-direction: column;
+    text-align: center;
+  }
+  header .container nav .nav-links.active {
+    display: flex;
+  }
+  header .container nav .nav-links li {
+    margin: 10px 0;
   }
   .hero .container h1 {
     font-size: 4rem;

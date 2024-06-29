@@ -27,9 +27,24 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 50px 25px;
+    padding: 20px 25px;
     margin: 0 auto;
+
     nav {
+      .hamburger {
+        display: none;
+        flex-direction: column;
+        cursor: pointer;
+
+        span {
+          width: 25px;
+          height: 3px;
+          background-color: #000;
+          margin-bottom: 5px;
+          transition: all 0.3s ease;
+        }
+      }
+
       ul {
         display: flex;
         list-style: none;
@@ -245,16 +260,33 @@ footer {
 }
 
 @media screen and (max-width: 768px) {
-  header .container {
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 0;
-  }
-  header .container nav ul {
-    flex-direction: column;
-  }
-  header .container nav ul li {
-    margin-left: 0;
+  header {
+    .container {
+      flex-wrap: wrap;
+
+      nav {
+        width: 100%;
+
+        .hamburger {
+          display: flex;
+        }
+
+        .nav-links {
+          display: none;
+          width: 100%;
+          flex-direction: column;
+          text-align: center;
+
+          &.active {
+            display: flex;
+          }
+
+          li {
+            margin: 10px 0;
+          }
+        }
+      }
+    }
   }
   .hero .container h1 {
     font-size: 4rem;
