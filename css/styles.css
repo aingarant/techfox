@@ -18,8 +18,7 @@ a {
 }
 
 a:hover {
-  background-color: #00ba01;
-  color: #fff;
+  color: #00ba01;
 }
 
 header .container {
@@ -217,12 +216,7 @@ footer .container p {
 
 .whatsapp-icon a:link,
 .whatsapp-icon a:visited {
-  color: #000;
-}
-
-.whatsapp-icon:hover {
   color: #00ba01;
-  background-color: #fff;
 }
 
 @media screen and (max-width: 768px) {
