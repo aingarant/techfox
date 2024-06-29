@@ -67,18 +67,18 @@ header {
       letter-spacing: -0.05em;
     }
     p {
-      font-size: 1.5rem;
-      font-weight: 200;
+      font-size: 2rem;
+      font-weight: 400;
       margin-bottom: 20px;
-      color: #fff;
+      color: #000;
     }
 
     button {
       background-color: #000;
       color: #fff;
-      padding: 10px 20px;
+      padding: 10px 30px;
       border: none;
-      font-size: 1.2em;
+      font-size: 1em;
       cursor: pointer;
       margin-top: 50px;
     }
@@ -97,8 +97,6 @@ header {
 
   .container {
     max-width: 1200px;
-    justify-content: space-between;
-    align-items: center;
     margin: 0 auto;
 
     .solution-items {
@@ -260,5 +258,20 @@ footer {
   }
   .hero .container h1 {
     font-size: 4rem;
+  }
+
+  .solutions,
+  .about,
+  .contact {
+    gap: 20px;
+    padding: 50px;
+  }
+  .solution-items {
+    flex-direction: column;
+
+    .solution-item {
+      width: 100%;
+      margin-bottom: 20px;
+    }
   }
 }
