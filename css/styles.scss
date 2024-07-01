@@ -122,7 +122,7 @@ header {
 
       .solution-item {
         background-color: #fff;
-        max-width: 100%; // Change from 33% to 100%
+        width: 33%; // Change from 33% to 100%
         padding: 25px;
         border-radius: 10px;
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -130,17 +130,17 @@ header {
         text-align: center;
 
         h2 {
-          font-size: 4.5rem;
+          font-size: 2.5rem;
           letter-spacing: -2px;
         }
 
         h3 {
-          font-size: 2rem;
+          font-size: 1.8rem;
           margin-bottom: 20px;
           letter-spacing: -2px;
         }
         p {
-          font-size: 1.2rem;
+          font-size: 1rem;
           margin-bottom: 20px;
         }
       }

@@ -109,7 +109,7 @@ header .container nav ul li {
 }
 .solutions .container .solution-items .solution-item {
   background-color: #fff;
-  max-width: 100%;
+  width: 33%;
   padding: 25px;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -117,16 +117,16 @@ header .container nav ul li {
   text-align: center;
 }
 .solutions .container .solution-items .solution-item h2 {
-  font-size: 4.5rem;
+  font-size: 2.5rem;
   letter-spacing: -2px;
 }
 .solutions .container .solution-items .solution-item h3 {
-  font-size: 2rem;
+  font-size: 1.8rem;
   margin-bottom: 20px;
   letter-spacing: -2px;
 }
 .solutions .container .solution-items .solution-item p {
-  font-size: 1.2rem;
+  font-size: 1rem;
   margin-bottom: 20px;
 }
 .solutions .container .solution-items .solution-item:hover {
