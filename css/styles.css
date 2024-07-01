@@ -109,7 +109,7 @@ header .container nav ul li {
 }
 .solutions .container .solution-items .solution-item {
   background-color: #fff;
-  width: 33%;
+  width: 100%;
   padding: 25px;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -264,7 +264,7 @@ footer .container p {
     flex-direction: column;
   }
   .solution-items .solution-item {
-    width: 100%;
+    max-width: 100%;
     margin-bottom: 20px;
   }
   .solution-items .solution-item h2 {
