@@ -109,7 +109,7 @@ header .container nav ul li {
 }
 .solutions .container .solution-items .solution-item {
   background-color: #fff;
-  width: 100%;
+  width: 380px;
   padding: 25px;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -229,6 +229,14 @@ footer .container p {
   color: #00ba01;
 }
 
+@media screen and (max-width: 820px) {
+  header .container {
+    padding: 20px 15px;
+  }
+  .hero .container h1 {
+    font-size: 6rem;
+  }
+}
 @media screen and (max-width: 768px) {
   header .container {
     flex-wrap: wrap;
@@ -264,7 +272,7 @@ footer .container p {
     flex-direction: column;
   }
   .solution-items .solution-item {
-    max-width: 100%;
+    width: 100%;
     margin-bottom: 20px;
   }
   .solution-items .solution-item h2 {
