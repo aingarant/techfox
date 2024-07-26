@@ -1,33 +1,42 @@
+const submitButton = document.querySelector("#submit-button")
+
 const submitForm = async (event) => {
   event.preventDefault()
-  const form = event.target
-  const data = new FormData(form)
-  const name = data.get("name")
-  const email = data.get("email")
-  const phone = data.get("phone")
-  const message = data.get("message")
+  const form = document.querySelector("#contact-form")
+  let message = ""
 
-  const payload = {
-    name,
-    email,
-    phone,
-    message,
-  }
+  console.log("submitting")
 
-  const response = await fetch("https://6gb.ca/api/techfox", {
-    method: "POST",
-    body: JSON.stringify(payload),
-    // nocors
-    cors: "no-cors",
-    // headers: {
-    //   "Content-Type": "application/json",
-    // },
-  })
+  const formData = new FormData(form)
 
-  if (response.ok) {
-    form.reset()
-    alert("Thank you for your message. We will get back to you soon.")
-  } else {
-    alert("Something went wrong. Please try again later.")
+  const formDataObject = Object.fromEntries(formData.entries())
+  console.log(formDataObject)
+
+  try {
+    const response = await fetch("http://localhost:3000/api/techfox", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(formDataObject),
+    })
+
+    const data = await response.json()
+    console.log(data)
+
+    if (response.ok) {
+      message = "ok"
+      form.reset()
+
+      form.innerHTML = `<div class="form-submit-success">
+        <h2>Your message has been sent successfully!</h2>
+      </div>`
+    } else {
+      message = "failed"
+    }
+  } catch (error) {
+    console.error(error)
   }
 }
+
+submitButton.addEventListener("click", submitForm)
